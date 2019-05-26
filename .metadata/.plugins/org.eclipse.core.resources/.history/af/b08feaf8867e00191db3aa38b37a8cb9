@@ -1,0 +1,20 @@
+package cucumber;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		plugin= {"pretty","json:target/cucumber/cucumber.json",
+		"html:target/CucumberHTML/"},
+		features = {"src/test/resources/Fetures/"},
+		glue = {"classpath:cucumber.stepdefinitions"},
+			/*tags= {"@Success2259"},*/
+		monochrome = true,
+		dryRun = false
+		)
+public class CucumberRunner {
+
+}			
+

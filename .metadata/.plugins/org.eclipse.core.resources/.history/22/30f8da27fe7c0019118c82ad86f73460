@@ -1,0 +1,19 @@
+#Author: Shyam Periyasamy
+
+@KiwiSaverCalc
+Feature: Kiwi saver retirment calc
+	I want that while using the KiwiSaver Retirement Calculator all fields in the calculator have got the information icon present 
+
+@IconPresentValidation
+Scenario: Information Icon presece check for all fields in Kiwi saver retirment calc page
+Given I am in the Westpac New Zealand Limitied banking website
+When navigated to KiwiSaver Retirment Calculator page
+Then vlaidate the <fileds> present with information icon
+|Field Name|
+|Current age|
+|Employment status|
+|Prescribed investor rate (PIR)|
+|Current KiwiSaver balance|
+|Voluntary contributions|
+|Risk profile|
+|Savings goal at retirement|

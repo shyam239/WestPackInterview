@@ -1,0 +1,40 @@
+1558564427273	Delete element
+1558564697977	Delete element
+1558564923421	Delete element
+1558565079223	Delete element
+1558565306060	Delete element
+1558565346202	Delete element
+1558565752620	Delete element
+1558566199944	Delete element
+1558575178311	Rename field 'lstPersonalSelection'
+1558578482539	Delete element
+1558582876707	Delete element
+1558584975552	Rename method 'btnClickHereToGetStartedIsClicable'
+1558684647381	Rename method 'returnDocTitel'
+1558684845556	Rename method 'docTitel'
+1558685531729	Delete element
+1558745930730	Rename method 'btnInfoCurrentAgeIsClickable'
+1558746103132	Rename method 'findWhichIframe'
+1558746324294	Rename method 'findCalcIframe'
+1558762708610	Rename method 'chkBtnInfoCurrentAgeIsDisplayed'
+1558762735509	Rename method 'btnInfoCurrentAgeIsDisplayed'
+1558763723084	Delete element
+1558765116085	Delete element
+1558790315358	Rename resource 'kiwiSaverRetirmentCalcPageInvestmentPlan'
+1558790360318	Delete element
+1558821962154	Rename resource 'log4j.properties'
+1558822901516	Delete element
+1558822926859	Delete element
+1558822945440	Delete element
+1558824988503	Copy compilation unit
+1558825016649	Copy file
+1558825380274	Move file
+1558825516242	Delete element
+1558826916624	Delete element
+1558826924544	Delete element
+1558827813601	Rename type 'Log4J2PropertiesConf'
+1558828188892	Rename resource 'log4j2.properties'
+1558828275487	Delete element
+1558828540801	Delete element
+1558828553989	Rename resource 'Oldlog4j2.properties'
+1558828799121	Delete element

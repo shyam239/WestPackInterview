@@ -1,0 +1,73 @@
+package utils;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class JavaScripts {
+	
+	private WebElement lastElem = null;
+	private String lastBorder = null;
+
+	private String SCRIPT_GET_ELEMENT_BORDER;
+	private String SCRIPT_UNHIGHLIGHT_ELEMENT;
+
+	public void highlightElement(WebElement elem, WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+	    unhighlightLast(driver);
+	    lastElem = elem;
+	    lastBorder = (String)(js.executeScript(SCRIPT_GET_ELEMENT_BORDER, elem));
+	}
+
+	public void unhighlightLast(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+	    if (lastElem != null) {
+	        try {
+	            js.executeScript(SCRIPT_UNHIGHLIGHT_ELEMENT, lastElem, lastBorder);
+	        } catch (StaleElementReferenceException ignored) {
+	        } finally {
+	            lastElem = null;
+	        }
+	    }
+	}
+	
+	/**
+	 * @param colour
+	 * @param element
+	 * @param driver
+	 * 
+	 * To change the background color of the given element
+	 * 
+	 */
+	public void changeColour(String color, WebElement element, WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("arguments[0].style.background = '"+ color + "'", element);
+
+		try {
+			Thread.sleep(20);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * @param num
+	 * @param element
+	 * @param driver
+	 * 
+	 * Flashing the background color for given number of times 
+	 * 
+	 */
+	public void flashBackGroundOfElement(int num, WebElement element, WebDriver driver) {
+		String bgColor=element.getCssValue("background-color");
+
+		for(int i=0;i<=num;i++) {
+			changeColour(bgColor,element,driver);
+		}
+	}
+	
+	public void highLightElement(WebElement ele, WebDriver driver) {
+		((JavascriptExecutor)driver).executeScript("arguments[0].style.border='3px solid red'", ele);
+	}
+}

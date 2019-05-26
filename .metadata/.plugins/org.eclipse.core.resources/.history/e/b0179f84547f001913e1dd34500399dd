@@ -1,0 +1,27 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author Shyam Periyasamy
+ *
+ * This class will contain all the common funtion or actions of the kiwisaver so that we can only call the 
+ */
+public class WpPerKiwiSavCommon extends MainPage{
+
+	public WpPerKiwiSavCommon(WebDriver driver) {
+		super(driver);
+	}
+	
+	PersonalBankingHeader perBankHead=new PersonalBankingHeader(driver);
+	BankingProduct bankProd=new BankingProduct(driver);
+	KiwiSaverPage kiwiSaverPage=new KiwiSaverPage(driver);
+	KiwiSaverRetirmentCalcPage kiwiSavRetiCalPage=new KiwiSaverRetirmentCalcPage(driver);
+	
+	public void navigateToMainPage(){
+		navigateToWestpacMainPage();
+	}
+	
+	public void 
+
+}

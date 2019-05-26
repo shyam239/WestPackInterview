@@ -1,0 +1,16 @@
+1558828858929	Delete element
+1558829205326	Delete element
+1558829315707	Delete element
+1558829356561	Rename resource 'Log4j2.properties'
+1558829913394	Rename resource 'log4j2.xml'
+1558829925459	Rename resource 'oLog4j2.properties'
+1558830030215	Delete element
+1558833330446	Rename type 'BankingHeaders'
+1558833409704	Rename local variable 'bankingHeaders'
+1558833659059	Delete element
+1558845382080	Rename method 'selectEmpStatEmployed'
+1558845598729	Rename method 'selectPIEInvestments'
+1558845613907	Rename field 'lstPIEInvestmentOption'
+1558845735944	Rename field 'selectedPIEInvestment'
+1558855933926	Rename field 'txtBtnVolunContri'
+1558862191228	Rename method 'driverSleepFor'

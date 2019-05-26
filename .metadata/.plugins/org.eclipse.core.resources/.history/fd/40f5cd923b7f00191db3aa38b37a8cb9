@@ -1,0 +1,15 @@
+package utils;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+
+public class LoggerUtil {
+
+	static GetPropFile getPropFile=new GetPropFile();
+	
+	public void logger() {
+		Logger logger=Logger.getLogger("LoggerUtil");
+		PropertyConfigurator.configure(getPropFile.log4JConfigFile("Log4j.properties"));
+	}
+	
+}

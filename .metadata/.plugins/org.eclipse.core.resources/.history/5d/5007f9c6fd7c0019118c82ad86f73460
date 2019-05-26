@@ -1,0 +1,24 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class MainPage {
+
+	protected WebDriver driver;
+	
+	public MainPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	/* Actions of MainPage*/
+	
+	public void navigateToWestpacMainPage(){
+		driver.navigate().to("https://www.westpac.co.nz/");
+	}
+	
+	public boolean checkUrlIsEqualToMainPage() {
+		return driver.getCurrentUrl().contains("https://www.westpac.co.nz/");
+	}
+}

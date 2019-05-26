@@ -1,0 +1,40 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class KiwiSaverPage extends MainPage{
+
+	public KiwiSaverPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	/* WebElements Of KiwiSaver Page*/
+	
+	/* Buttons */
+	
+	@FindBy(css="a[class='btn'][href='/kiwisaver/calculators/kiwisaver-calculator/']")
+	private WebElement btnClickHereToGetStarted;
+	
+	/* Actions or Functions of KiwiSaverPage*/
+	
+	public void btnClickHereToGetStartedIsClicable() {
+		driverWaitFor(10).until(ExpectedConditions.elementToBeClickable(btnClickHereToGetStarted));
+		btnClickHereToGetStarted.click();
+	}
+	
+	public boolean checkUrlIsEqualToKiwiSaverPage(String kiwiSaverPageUrl) {
+		return driver.getCurrentUrl().contains(kiwiSaverPageUrl);
+	}
+
+	
+	/* Timer */
+	
+	public WebDriverWait driverWaitFor(int sec) {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		return wait;
+	}
+}

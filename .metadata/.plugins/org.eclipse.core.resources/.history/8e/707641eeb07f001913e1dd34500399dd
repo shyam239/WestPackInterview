@@ -1,0 +1,19 @@
+#Author: Shyam Periyasamy
+@KiwiSaverCalc @Story2
+Feature: Kiwi saver retirment calc
+  I want that the KiwiSaver Retirement Calculator users are able to calculate what their KiwiSaver projected balance would be at retirement
+
+  @Ac1
+  Scenario: Information Icon presece check for all fields in Kiwi saver retirment calc page
+    Given I am in the Westpac New Zealand Limitied banking website
+    When Navigated to KiwiSaver Retirment Calculator page
+    Then Enter the <InPutValues>
+      | Field Name                            | HelpId                      | Input Values |
+      | Current age                           | CurrentAge                  |           30 |
+      | Employment status                     | EmploymentStatus            | Employed     |
+      | Salary or wages per year (before tax) | AnnualIncome                |        82000 |
+      | KiwiSaver member contribution         | KiwiSaverMemberContribution |            4 |
+      | Prescribed investor rate (PIR)        | PIRRate                     | 17.5%        |
+      | Risk profile                          | RiskProfile                 | High         |
+     And Check the projected balance is displayed
+			

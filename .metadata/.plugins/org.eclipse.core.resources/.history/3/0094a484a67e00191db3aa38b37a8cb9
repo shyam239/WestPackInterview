@@ -1,0 +1,27 @@
+#Author: Shyam Periyasamy
+@KiwiSaverCalc
+Feature: Kiwi saver retirment calc
+  I want that while using the KiwiSaver Retirement Calculator all fields in the calculator have got the information icon present
+
+  @IconPresentValidation
+  Scenario: Information Icon presece check for all fields in Kiwi saver retirment calc page
+    Given I am in the Westpac New Zealand Limitied banking website
+    When Navigated to KiwiSaver Retirment Calculator page
+    Then Vlaidate the <fileds> present with information icon
+      | Field Name                     | HelpId                 |
+      | Current age                    | CurrentAge             |
+      | Employment status              | EmploymentStatus       |
+      | Prescribed investor rate (PIR) | PIRRate                |
+      | Find My Rate                   | FindMyPIRRateQ1        |
+      | Current KiwiSaver balance      | KiwiSaverBalance       |
+      | Voluntary contributions        | VoluntaryContributions |
+      | Risk profile                   | RiskProfile            |
+      | Savings goal at retirement     | SavingsGoal            |
+
+  @IconPresentValidation
+  Scenario: Information Icon presece check for all fields in Kiwi saver retirment calc page
+    Given I am in the Westpac New Zealand Limitied banking website
+    When Navigated to KiwiSaver Retirment Calculator page
+    Then Vlaidate the <fileds> present with information icon
+      | Field Name                     | HelpId                 |ExpectedHelpText|
+      | Current age                    | CurrentAge             |This calculator has an age limit of 64 years old as you need to be under the age of 65 to join KiwiSaver.|

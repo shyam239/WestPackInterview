@@ -1,0 +1,19 @@
+package pom;
+
+/**
+ * @author Shyam Periyasamy
+ * 
+ * This class contains the common objects of all the personal banking tabs e.g
+ * tabs like Everyday money, Home loans, Credit cards, Personal loan, Insurance, 
+ * KiwiSaver, Investments, FX,travel & migrant, Managing your money.
+ * 
+ * the tabs mentioned in the e.g will never change even if we navigate to one of 
+ * the sub tabs of the these tabs 
+ * 
+ * e.g if we click 'interest rates' under Everyday Money we will be navigate to 
+ * interest rates page but still we will be able to see all these tabs in that page.
+ *
+ */
+public class PersonalBankingPageGrp {
+
+}

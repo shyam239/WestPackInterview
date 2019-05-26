@@ -1,0 +1,16 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+
+public class WpPerKiwiSavCommon extends MainPage{
+
+	public WpPerKiwiSavCommon(WebDriver driver) {
+		super(driver);
+	}
+	
+	PersonalBankingHeader perBankHead=new PersonalBankingHeader(driver);
+	BankingProduct bankProd=new BankingProduct(driver);
+	KiwiSaverPage kiwiSaverPage=new KiwiSaverPage(driver);
+	KiwiSaverRetirmentCalcPage kiwiSavRetiCalPage=new KiwiSaverRetirmentCalcPage(driver);
+
+}

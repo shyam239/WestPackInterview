@@ -1,0 +1,20 @@
+package cucumber;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import cucumber.api.testng.AbstractTestNGCucumberTests;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		plugin= {"pretty","json:target/cucumber/cucumber.json",
+		"html:target/CucumberHTML/"},
+		features = {"src/test/resources/Fetures/"},
+		glue = {"classpath:cucumber.stepdefinitions"},
+		tags = {"@IconPresentValidation"},
+		monochrome = true,
+		dryRun = false
+		)
+public class CucumberRunner extends AbstractTestNGCucumberTests{
+
+}			

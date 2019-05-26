@@ -1,0 +1,9 @@
+package utils;
+
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Driver {
+	public void waitFor(int waitInSec) {
+		WebDriverWait wait = new WebDriverWait(driver,10);
+	}
+}

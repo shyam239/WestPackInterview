@@ -1,0 +1,40 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+/**
+ * @author Shyam Periyasamy
+ * 
+ * This class contains the common objects of all the personal banking tabs e.g
+ * sw-ubermenu-selection-link like Everyday money, Home loans, Credit cards, Personal loan, Insurance, 
+ * KiwiSaver, Investments, FX,travel & migrant, Managing your money.
+ * 
+ * the sw-ubermenu-selection-link mentioned in the e.g will never change even if we navigate to one of 
+ * the ubermenu-item-link of the these sw-ubermenu-selection-link 
+ * 
+ * e.g if we click 'interest rates' under Everyday Money we will be navigate to 
+ * interest rates page but still we will be able to see all these sw-ubermenu-selection-link in that 
+ * page also.
+ *
+ */
+public class PersonalBankingHeaderObjects extends MainPage {
+
+	public PersonalBankingHeaderObjects(WebDriver driver) {
+		super(driver);
+	}
+
+	
+	/* Common WebElements of personal banking */
+	
+	@FindBy(css="a[id='logo'][class='sw-header-logo']")
+	private WebElement imgLogo;
+	
+	@FindBy(css="a[class='sw-ubermenu-section-link '][id='ubermenu-section-link-managing-your-money-ps']")
+	private WebElement lnkManageYourMoney;
+	
+	@FindBy(css="a[class='sw-ubermenu-section-link '][id='ubermenu-section-link-kiwisaver-ps']")
+	private WebElement lnkKiwiSaver;
+	
+}

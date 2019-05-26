@@ -1,0 +1,49 @@
+package pom;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+
+/**
+ * @author Shyam Periyasamy
+ * This class contains the common objects of all the Banking sw-header-menu-link 
+ * like Personal, Business, Agribusiness, Institutional, Who We Are, Growing NZ.
+ */
+public class BankingHeaders extends MainPage {
+
+	public BankingHeaders(WebDriver driver) {
+		super(driver);
+	}
+	
+	/* WebElements of sw-header-menu-link*/
+	
+	/* WebElement*/
+	@FindBy(css="a[class='sw-header-menu-link selected']")
+	private WebElement selectedWebElement;
+	
+	/* List*/
+	@FindBy(css="a[class='sw-header-menu-link")
+	private List lstHeaders;
+	
+	/* Actions or Functions of sw-header-menu-link*/
+	
+	public boolean checkSlectedHeaderIs(String header) {
+		return selectedWebElement.getText().equals(header);
+	}
+	
+	public void clickGivenHeader(String header) {
+			WebElement ele=null;
+			int headingLinkCommon=lstHeaders.size();		
+			for (int i=0;i<headingLinkCommon;i++) {
+				ele=(WebElement) lstHeaders.get(i);
+				if (ele.getText().equals(header)) {
+					ele.click();
+				break;
+				}
+			}
+		}
+
+}
